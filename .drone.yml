@@ -5,7 +5,8 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: agnewp@gmail.com
+    username:
+      from_secret: docker_username
     password:
       from_secret: docker_password
     repo: agnewp/locust
