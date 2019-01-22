@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: kevinbacon
+    password: pa55word
+    repo: agnewp/locust
+    tags: 
+     - latest
+     - 0.9.0
+    
