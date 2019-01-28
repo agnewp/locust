@@ -10,7 +10,7 @@ if [[ "$LOCUST_MODE" = "master" ]]; then
 elif [[ "$LOCUST_MODE" = "worker" ]]; then
     LOCUST="$LOCUST --slave --master-host=$LOCUST_MASTER"
     # wait for master
-    while ! wget -sqT5 $LOCUST_MASTER:$LOCUST_MASTER_WEB >/dev/null 2>&1; do
+    while ! wget -SqT5 $LOCUST_MASTER:$LOCUST_MASTER_WEB >/dev/null 2>&1; do
         echo "Waiting for master"
         sleep 5
     done
